@@ -41,7 +41,13 @@ body {
     list-style: none;
     display: flex;
 }
-  
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 .menu-bar ul li {
     padding: 10px 30px;
     position: relative;
@@ -56,12 +62,6 @@ body {
   
 .menu-bar ul li a:hover {
     color: var(--color-primary);
-}
-  
-.fas {
-    float: right;
-    margin-left: 10px;
-    padding-top: 3px;
 }
   
 .dropdown-menu {
@@ -86,35 +86,8 @@ body {
     padding: 10px;
 }
   
-.dropdown-menu-1 {
-    display: none;
-}
-  
-.dropdown-menu ul li:hover .dropdown-menu-1 {
-    display: block;
-    position: absolute;
-    left: 150px;
-    top: 0;
-    background-color: var(--color-black);
-}
-
 html {
     scroll-behavior: smooth;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: #4cb1c5;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-a {
-    text-decoration: none;
 }
 
 .hero {
@@ -162,15 +135,6 @@ nav a:hover {
     background: #a8e5f7;
 }
 
-nav .indicator {
-    width: 0px;
-    height: 7px;
-    background: #e0c1c1;
-    position: absolute;
-    bottom: 0;
-    transition: .3s ease-out all;
-}
-
 .seccion {
     min-height: 100vh;
     max-width: 800px;
@@ -208,79 +172,61 @@ nav .indicator {
 }
 
 #contacto img {
-    width: 100px; /* Ajusta este valor para hacer las imágenes más pequeñas */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin: 10px; /* Añade un espacio alrededor de las imágenes */
+    width: 100px;
+    height: auto;
+    margin: 10px;
     transition: transform 0.3s ease;
 }
 
 #contacto img:hover {
-    transform: scale(1.1); /* Efecto de zoom cuando pases el ratón sobre la imagen */
+    transform: scale(1.1);
     cursor: pointer;
 }
 
 /* Estilos para pantallas de hasta 800px */
 @media screen and (max-width: 800px) {
-    .logo {
-        font-size: 24px;
-    }
-    
     .hero h1 {
-        font-size: 48px;
+        font-size: 50px;
     }
-    
-    .hero p {
-        font-size: 18px;
-    }
-    
-    nav a {
-        font-size: 14px;
-        padding: 5px;
-    }
-    
-    .seccion img {
-        width: 80%;
-    }
-    
-    .seccion .card {
-        width: 100%;
-    }
-}
 
-/* Estilos para pantallas de hasta 600px */
-@media screen and (max-width: 600px) {
+    .hero p {
+        font-size: 20px;
+    }
+
     .menu-bar ul {
-        display: none;
         flex-direction: column;
-        align-items: center;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        background-color: var(--color-black);
+        transition: all 0.3s ease;
     }
 
     .menu-bar ul.active {
-        display: flex;
+        left: 0;
     }
 
-    .menu-bar .hamburger {
+    .menu-bar ul li {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .hamburger {
         display: block;
-        font-size: 30px;
-        cursor: pointer;
+        color: var(--color-white);
     }
 
-    nav a {
-        font-size: 12px;
-    }
-}
-
-/* Estilos para pantallas pequeñas */
-@media screen and (max-width: 450px) {
-    nav a {
-        font-size: 12px;
+    .seccion {
+        padding-top: 80px;
     }
 
-    .hero h1 {
-        font-size: 40px;
+    .menu-bar ul li:hover .dropdown-menu {
+        position: relative;
+        background-color: transparent;
     }
 
-    .hero p {
-        font-size: 16px;
+    .menu-bar ul li:hover .dropdown-menu ul li {
+        padding: 5px;
     }
 }
