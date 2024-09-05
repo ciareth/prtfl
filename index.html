@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>PORTAFOLIO</title>
+</head>
+<body>
+    
+    <div class="menu-bar">
+        <h1 class="logo">CIARETH<span>SANTOS.</span></h1>
+        <!-- Ícono de menú hamburguesa -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul>
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="#sobremi">SOBRE MI</a></li>
+          <li><a href="#proyectos">PROYECTOS<i class="fas fa-caret-down"></i></a>
+  
+              <div class="dropdown-menu">
+                  <ul>
+                    <li><a href="#p1">Proyecto 1</a></li>
+                    <li><a href="#p2">Proyecto 2</a></li>
+                    <li><a href="#p3">Proyecto 3</a></li>
+                  </ul>
+                </div>
+          </li>
+          <li><a href="#habilidades">HABILIDADES</a>
+          </li>
+          <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+    </div>
+
+    <div class="hero" id="hero">
+        <h1>PORTAFOLIO PERSONAL</h1>
+        <p>HTML • CSS • JavaScript</p>
+    </div>
+
+    <div class="secciones">
+        <div class="seccion" id="sobremi">
+            <div class="card">
+                <h1>SOBRE MI</h1>
+                <img src="img/cecb2f74-694c-4fa3-b967-8a452fd82182.jpg" alt="">
+                <p>soy una persona a la cual le gusta aprender muchas cosas, y me gusta vivir mi dia a dia...</p>
+            </div>
+        </div>
+
+        <div class="seccion" id="p1">
+            <div class="card">
+                <h1>PROYECTO 1</h1>
+               <a href=" https://ciareth.github.io/ciarethstoree"><img src="img/Screenshot (4).png" alt=""></a>
+                <p>TIENDA DE BIKINIS DE CROCHET EN LINEA</p>
+            </div>
+        </div>
+
+        <div class="seccion" id="p2">
+            <div class="card">
+                <h1>PROYECTO 2</h1>
+               <a href=" https://ciareth.github.io/sitioweb2/"><img src="img/Screenshot (5).png" alt=""></a>
+                <p>MENU SLIDER</p>
+            </div>
+        </div>
+
+        <div class="seccion" id="p3">
+            <div class="card">
+                <h1>PROYECTO 3</h1>
+               <a href=" https://ciareth.github.io/JISEL33/"><img src="img/Screenshot (6).png" alt=""></a>
+                <p>PAGINA WEB PERSONAL</p>
+            </div>
+        </div>
+
+        <div class="seccion" id="habilidades">
+            <div class="card">
+                <h1>HABILIDADES</h1>
+                <p>
+                    <ol>Aprendo rapido</ol>
+                    <ol>Capacidad de liderazgo</ol>
+                    <ol>Rapidez</ol>
+                    <ol>Habilidades basicas en CSS HTML y JavaScript</ol>
+                </p>
+            </div>
+        </div>
+
+        <div class="seccion" id="contacto">
+            <div class="card">
+                <h1>CONTACTO</h1>
+                <a href="https://www.instagram.com/jisel.18?igsh=MW1qMXBxMDA2dm8zNQ=="><img src="img/download.jpg" alt="Instagram" width="20%"></a>
+                <a href="https://www.tiktok.com/@ciareth_?_r=1&_d=e3imb189a744ha&sec_uid=MS4wLjABAAAAF7UG9KJN0jhUwNqtCQTmSYaZ36-c9YmIdZad0gIlVJunUdzZvBOQRUkxsF1Li6Ud"><img src="img/yiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu-bar ul');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
